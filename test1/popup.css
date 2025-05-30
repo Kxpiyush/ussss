@@ -1,0 +1,268 @@
+:root {
+    --color-brand: #03a87c; /* Google Blue */
+    --color-brand-darker: #03a87c;
+    --color-green: #03a87c;
+    --color-red: #f44336;
+    --color-grey-lighter: #eee;
+    --color-grey: #aaa;
+    --color-black: #000;
+    --color-white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Use a modern font */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-container {
+    width: 350px; 
+    height: 580px; 
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+h1 {
+    font-size: 17px;
+    text-align: center;
+    font-weight: normal;
+    color: #03a87c; 
+    margin-left:15px; 
+}
+
+header {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.logo {
+    height: 60px;
+    vertical-align: middle;
+    margin-left: 15px;
+    
+}
+
+.dashboard {
+    background-color: var(--color-grey-lighter);
+    padding: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.credits-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+.dashboard label {
+    font-size: 15px; 
+    font-weight: 400; 
+    margin-left: 5px; 
+    vertical-align: middle; 
+    display: inline-block;
+}
+
+
+.toggle-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1px 0;
+}
+
+.space{
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;  
+    height: 25px;  
+    margin: 10px 0;  
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px; 
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;  
+    width: 20px;  
+    left: 3px;  
+    bottom: 2.5px;  
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; 
+}
+
+input:checked + .slider {
+    background-color: #03a87c; 
+}
+
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--color-brand);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px); 
+}
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.slider-container {
+    margin: 15px 0;
+}
+.slider-container label {
+    font-size: 12px; /* Adjust the size as needed */
+}
+
+.autosave-text{
+    margin-bottom: 5px;
+}
+
+
+input[type=range] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    margin-bottom: 15px;
+}
+.button-form, .button {
+    min-width: 116px; 
+}
+
+
+
+.button {
+    cursor:pointer;
+    padding: 12px 0; 
+    margin: 0 10px; 
+    text-align: center; 
+    white-space: nowrap; 
+}
+.configure {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.contact {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    min-width: 116px;
+}
+.a {
+    cursor:pointer;
+    padding: 12px 0; 
+    margin: 0 10px; 
+    text-align: center; 
+    white-space: nowrap; 
+    min-width: 116px
+}
+.buy{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border:2px solid black;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-grey);
+}
+
+.twitter-handle {
+    color: var(--color-green);
+}
+
+.twitter-handle img {
+    height: 24px;
+    vertical-align: middle;
+}
+
+.manage-subscription {
+    display: none; 
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    height: 38px; 
+}
+
+.date-range {
+    display: flex;
+    gap: 10px;
+}
+
+.date-range div {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.bold {
+    margin-bottom: 5px;
+    display: block;
+    
+}

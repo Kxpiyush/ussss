@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <script defer src="../libs/fontawesome-all.min.js"></script>
+    <script src="libs/sweetalert2.min.js"></script>
+    <script src="libs/sweetalert2.all.min.js"></script>
+    <script src="popup.js"></script>
+
+        
+</head>
+<body>
+    <section class="popup-container">
+        <header>
+            <img src="images/usa-canada.png" alt="US Visa Logo" class="logo">
+            <h1>US Visa Auto Rescheduler <br><span id="version"></span></h1>
+        </header>
+        <div class="credits-left">
+            <h3  id="credits">50</h3>
+            <p  text-center">&nbsp;Free Credits</p>
+        </div>
+
+    
+
+        <div class="dashboard">
+            <div class="toggle-section">
+                <label class="switch">
+                    <input type="checkbox" id="activate">
+                    <span class="slider round"></span>
+                </label>
+                <label for="activate">Activate the script</label>
+            </div>
+
+            <div class="toggle-section space">
+                <label class="switch">
+                    <input type="checkbox" id="autobook">
+                    <span class="slider round"></span>
+                </label>
+                <label for="autobook">Enable Autobook</label>
+            </div>
+            
+            <div class="form-group date-range">
+                <div>
+                    <label class="bold" for="frequencyType">Frequency:</label>
+                    <select class="form-control" id="frequencyType">
+                        <option selected value="seconds">Seconds</option>
+                        <option value="minutes">Minutes</option>
+                        <option value="hours">Hours</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="bold" for="frequencyValue">Value:</label>
+                    <input class="form-control" type="number" id="frequencyValue" min="1" max="59" value="8">
+                </div>
+            </div>
+            
+                
+            
+
+            <div class="form-group date-range">
+                <div>
+                    <label class="bold" for="start">Start Date:</label>
+                    <input class="form-control" type="date" id="start">
+                </div>
+                <div>
+                    <label class="bold" for="end">End Date:</label>
+                    <input class="form-control" type="date" id="end">
+                </div>
+            </div>
+
+            <p class="autosave-text">Changes are autosaved.</p>
+            
+            <div class="buttons-container">
+                <form class="button-form" name="ais_visa_info" id="ais_visa_info">
+                    <button id="reset_info" type="submit" class="button configure">Reset</button>
+                </form>
+                <button id="contact_us" form="none" class="button contact">Contact Us</button>
+            </div>
+
+
+            
+            <div class="buttons-container">
+                <a class="a buy" href="https://buy.stripe.com/dR64kl0BM0DFdiw3cf" target="_blank" style="display: inline-block; background-color: #03a87c; color: #ffffff; text-align: center;  text-decoration: none; font-family: Arial, sans-serif;">
+                    Buy Credits
+                </a>
+                <button id="downloadLogs" class="button contact" >Download Logs</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/content.js"></script>
+   
+</body>
+</html>
